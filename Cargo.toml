@@ -2,6 +2,11 @@
 name = "sjabloon"
 version = "0.0.1"
 edition = "2024"
+description = "a crate for templating html"
+authors = ["Julian Ollivieira"]
+documentation = "https://docs.rs/sjabloon"
+repository = "https://github.com/snx-rs/sjabloon"
+license = "MIT"
 
 [lib]
 proc-macro = true
