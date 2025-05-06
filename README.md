@@ -7,16 +7,15 @@ templates is comparable to writing JSX on the server.
 
 you can define templates using the `template` macro. this macro will be
 transpiled to a `format` macro call at build-time, which will result in a
-string at run-time.
-
-components are just functions/closures which return a string.
+string at run-time. "components" are just functions/closures which return a
+string.
 
 ###### elegant and simple syntax
 
 - use braced blocks to write arbitrary Rust code
 - braces can be omitted for attribute values
-- fragments
 - quoted and unquoted text nodes
+- fragments
 
 ```rust
 fn article(article: Article) -> String {
@@ -41,7 +40,7 @@ fn articles_list(articles: Vec<Article>) -> String {
         <section>
             <h1>articles</h1>
             <ul>
-                {articles.into_iter().map(task).collect::<Vec<String>>().join("")} 
+                {articles.into_iter().map(article).collect::<Vec<String>>().join("")} 
             </ul>
         </section>
     }
